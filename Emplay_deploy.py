@@ -63,7 +63,7 @@ if __name__=="__main__":
                     </style>
                     <p class="custom-text">Emplay Assignment for Internship opportunity </p>
                     """, unsafe_allow_html=True)
-    col104, col105, col106 = st.columns([90,200,90])
+    col104, col105, col106 = st.columns([140,200,140])
     with col105:
            st.markdown("""
                     <style>
