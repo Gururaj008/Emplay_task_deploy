@@ -127,7 +127,6 @@ if __name__=="__main__":
             extracted_text = extract_text_from_word(uploaded_file)
             content_list = extracted_text[0][0][0]
             formatted_text = "\n\n".join(content_list)
-            st.write(len(formatted_text))
             part1 = formatted_text[:(len(formatted_text)//5)]
             part2 = formatted_text[(len(formatted_text)//5):(len(formatted_text)*2//5)]
             part3 = formatted_text[(len(formatted_text)*2//5):(len(formatted_text)*3//5)]
