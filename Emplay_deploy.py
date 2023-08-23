@@ -59,7 +59,7 @@ if __name__=="__main__":
            st.markdown("""
                     <style>
                     @import url('https://fonts.googleapis.com/css2?family=Agdasima');
-                    .custom-text { font-family: 'Agdasima', sans-serif; font-size: 40px;color:cyan }
+                    .custom-text { font-family: 'Agdasima', sans-serif; font-size: 50px;color:cyan }
                     </style>
                     <p class="custom-text">Emplay Assignment for Internship opportunity </p>
                     """, unsafe_allow_html=True)
