@@ -54,7 +54,7 @@ def identify_names(text):
 
 if __name__=="__main__":
     st.set_page_config(layout="wide")
-    col101, col102, col103 = st.columns([40,200,40])
+    col101, col102, col103 = st.columns([40,250,40])
     with col102:
            st.markdown("""
                     <style>
