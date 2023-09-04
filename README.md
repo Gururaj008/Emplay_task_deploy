@@ -33,3 +33,5 @@ STEPS INVOLVED
 •	Wrote the results into a docx file
 
 •	Provided user with an option to download the ‘localized demo script.docx’ file
+
+Hosted online at : https://emplay-nlp-task-by-gururaj-hc.streamlit.app/
