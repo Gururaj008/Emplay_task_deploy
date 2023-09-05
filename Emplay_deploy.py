@@ -38,7 +38,7 @@ def convert_lang(text, lang):
     review = response['choices'][0]['message']['content']
     return review
 
-def identify_names(text):
+def identify_names(text,country):
     msg = f"Identify and replace the names in the document from native {country} names"
     messages = [
         {"role": "system", "content": "You are a helpful assistant, who is helping me with a NLP task"},
@@ -54,7 +54,7 @@ def identify_names(text):
 
 if __name__=="__main__":
     st.set_page_config(layout="wide")
-    col101, col102, col103 = st.columns([40,250,40])
+    col101, col102, col103 = st.columns([20,200,20])
     with col102:
            st.markdown("""
                     <style>
@@ -63,7 +63,7 @@ if __name__=="__main__":
                     </style>
                     <p class="custom-text">Emplay Assignment for Internship opportunity </p>
                     """, unsafe_allow_html=True)
-    col104, col105, col106 = st.columns([140,200,140])
+    col104, col105, col106 = st.columns([80,200,80])
     with col105:
            st.markdown("""
                     <style>
@@ -127,6 +127,7 @@ if __name__=="__main__":
             extracted_text = extract_text_from_word(uploaded_file)
             content_list = extracted_text[0][0][0]
             formatted_text = "\n\n".join(content_list)
+            st.write(len(formatted_text))
             part1 = formatted_text[:(len(formatted_text)//5)]
             part2 = formatted_text[(len(formatted_text)//5):(len(formatted_text)*2//5)]
             part3 = formatted_text[(len(formatted_text)*2//5):(len(formatted_text)*3//5)]
@@ -134,15 +135,15 @@ if __name__=="__main__":
             part5 = formatted_text[(len(formatted_text)*4//5):]
 
             if st.button("Create .docx File",use_container_width=True):
-                names1 = identify_names(part1)
+                names1 = identify_names(part1,country)
                 result1 = convert_lang(names1, lang)             
-                names2 = identify_names(part2)
+                names2 = identify_names(part2,country)
                 result2 = convert_lang(names2, lang)
-                names3 = identify_names(part3)
+                names3 = identify_names(part3,country)
                 result3 = convert_lang(names3, lang)
-                names4 = identify_names(part4)
+                names4 = identify_names(part4,country)
                 result4 = convert_lang(names4, lang)
-                names5 = identify_names(part5)
+                names5 = identify_names(part5,country)
                 result5 = convert_lang(names5, lang)
                 final_result = result1 + result2 + result3 + result4 + result5
                 doc = Document()
