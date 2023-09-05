@@ -38,7 +38,7 @@ def convert_lang(text, lang):
     review = response['choices'][0]['message']['content']
     return review
 
-def identify_names(text,country):
+def identify_names(text):
     msg = f"Identify and replace the names in the document from native {country} names"
     messages = [
         {"role": "system", "content": "You are a helpful assistant, who is helping me with a NLP task"},
@@ -135,15 +135,15 @@ if __name__=="__main__":
             part5 = formatted_text[(len(formatted_text)*4//5):]
 
             if st.button("Create .docx File",use_container_width=True):
-                names1 = identify_names(part1,country)
+                names1 = identify_names(part1)
                 result1 = convert_lang(names1, lang)             
-                names2 = identify_names(part2,country)
+                names2 = identify_names(part2)
                 result2 = convert_lang(names2, lang)
-                names3 = identify_names(part3,country)
+                names3 = identify_names(part3)
                 result3 = convert_lang(names3, lang)
-                names4 = identify_names(part4,country)
+                names4 = identify_names(part4)
                 result4 = convert_lang(names4, lang)
-                names5 = identify_names(part5,country)
+                names5 = identify_names(part5)
                 result5 = convert_lang(names5, lang)
                 final_result = result1 + result2 + result3 + result4 + result5
                 doc = Document()
