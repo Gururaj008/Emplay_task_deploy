@@ -16,7 +16,7 @@ def convert_lang(text, lang):
     messages = [
         {"role": "system", "content": "You are a language translator"},
         {"role": "user", "content": "Mandatorily stick to the following instructions while generation your response"},
-        {"role": "user", "content": "1. Translate and all the words from english into the specified language"},
+        {"role": "user", "content": "1. Translate all the words from english into the specified language"},
         {"role": "user", "content": "2. Dont skip the page numbers"},
         {"role": "user", "content": "2. There are some repeated sentences in the document as explained in the below example, translate and compulsarily retain them in the same format"},
         {"role": "user", "content": "For example"},
