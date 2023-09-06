@@ -54,7 +54,7 @@ def identify_names(text,country):
 
 if __name__=="__main__":
     st.set_page_config(layout="wide")
-    col101, col102, col103 = st.columns([20,200,20])
+    col101, col102, col103 = st.columns([40,200,40])
     with col102:
            st.markdown("""
                     <style>
@@ -63,7 +63,7 @@ if __name__=="__main__":
                     </style>
                     <p class="custom-text">Emplay Assignment for Internship opportunity </p>
                     """, unsafe_allow_html=True)
-    col104, col105, col106 = st.columns([80,200,80])
+    col104, col105, col106 = st.columns([100,200,100])
     with col105:
            st.markdown("""
                     <style>
